@@ -5,7 +5,7 @@
     <label>Fluent App</label>
     <oauthConfig>
         <callbackUrl>https://login.salesforce.com</callbackUrl>
-        <consumerKey>3MVG9rZjd7MXFdLgsonSG2EkyznZ2HOomuRkQw.eHNFa6ZnMRb18mQBFZo9h_u2xhKqty8R8WPgrAyK1Pp6JG</consumerKey>
+        <consumerKey></consumerKey>
         <isAdminApproved>false</isAdminApproved>
         <isClientCredentialEnabled>true</isClientCredentialEnabled>
         <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
