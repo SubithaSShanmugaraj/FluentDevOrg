@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Suggestion_Questions__c</fullName>
+    <description>Comma-separated list of suggested questions for this video. Example: What sizes are available?,Is it eco-friendly?,What materials are used?</description>
+    <inlineHelpText>Enter suggested questions separated by commas. These will appear as clickable buttons in the chat interface.</inlineHelpText>
+    <label>Suggestion Questions</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

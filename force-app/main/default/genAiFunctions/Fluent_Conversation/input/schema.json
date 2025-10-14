@@ -1,0 +1,21 @@
+{
+  "required" : [ "campaignId", "productCode" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "campaignId" : {
+      "title" : "campaignId",
+      "description" : "Pass Campaign Id",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "productCode" : {
+      "title" : "productCode",
+      "description" : "Pass ProductCode",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

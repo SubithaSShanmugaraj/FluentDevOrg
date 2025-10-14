@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Score__c</fullName>
+    <description>Calculated lead score based on user engagement and intent signals (0-100)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Lead score calculated from engagement patterns, question types, and interaction frequency. Higher scores indicate stronger purchase intent.</inlineHelpText>
+    <label>Lead Score</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

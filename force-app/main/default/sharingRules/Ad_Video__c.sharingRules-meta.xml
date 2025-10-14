@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Fluent_Site_Users_Ad_Videos</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Allow Fluent Smart Shop users to view all ad videos</description>
+        <label>Fluent Site Users - Ad Videos</label>
+        <sharedTo>
+            <group>Fluent_Site_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingGuestRules>
+        <fullName>Guest_User_Access_to_Ad_Videos</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Guest User Access to Ad Videos</label>
+        <sharedTo>
+            <guestUser>Fluent</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+</SharingRules>

@@ -1,0 +1,125 @@
+{
+  "records": [
+    {
+      "attributes": {
+        "type": "E_Cart_Product__c",
+        "referenceId": "ECartProduct1"
+      },
+      "Name": "Wireless Headphones",
+      "Description__c": "Premium noise-cancelling wireless headphones with 30-hour battery life. Perfect for music lovers and professionals.",
+      "Price__c": 299.99,
+      "Image_URL__c": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"
+    },
+    {
+      "attributes": {
+        "type": "E_Cart_Product__c",
+        "referenceId": "ECartProduct2"
+      },
+      "Name": "Smart Watch",
+      "Description__c": "Fitness tracking smartwatch with heart rate monitor, GPS, and water resistance. Stay connected on the go.",
+      "Price__c": 399.99,
+      "Image_URL__c": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"
+    },
+    {
+      "attributes": {
+        "type": "E_Cart_Product__c",
+        "referenceId": "ECartProduct3"
+      },
+      "Name": "Laptop Backpack",
+      "Description__c": "Durable travel backpack with padded laptop compartment, USB charging port, and water-resistant material.",
+      "Price__c": 79.99,
+      "Image_URL__c": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400"
+    },
+    {
+      "attributes": {
+        "type": "E_Cart_Product__c",
+        "referenceId": "ECartProduct4"
+      },
+      "Name": "Bluetooth Speaker",
+      "Description__c": "Portable wireless speaker with 360° sound, waterproof design, and 12-hour playtime. Perfect for outdoor adventures.",
+      "Price__c": 149.99,
+      "Image_URL__c": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400"
+    },
+    {
+      "attributes": {
+        "type": "E_Cart_Product__c",
+        "referenceId": "ECartProduct5"
+      },
+      "Name": "Wireless Mouse",
+      "Description__c": "Ergonomic wireless mouse with precision tracking and rechargeable battery. Comfortable for extended use.",
+      "Price__c": 49.99,
+      "Image_URL__c": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400"
+    },
+    {
+      "attributes": {
+        "type": "E_Cart_Product__c",
+        "referenceId": "ECartProduct6"
+      },
+      "Name": "USB-C Hub",
+      "Description__c": "7-in-1 USB-C hub with HDMI, USB 3.0, SD card reader, and 100W power delivery. Essential for modern laptops.",
+      "Price__c": 59.99,
+      "Image_URL__c": "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400"
+    },
+    {
+      "attributes": {
+        "type": "E_Cart_Product__c",
+        "referenceId": "ECartProduct7"
+      },
+      "Name": "Phone Case",
+      "Description__c": "Ultra-slim protective phone case with military-grade drop protection and wireless charging compatibility.",
+      "Price__c": 34.99,
+      "Image_URL__c": "https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=400"
+    },
+    {
+      "attributes": {
+        "type": "E_Cart_Product__c",
+        "referenceId": "ECartProduct8"
+      },
+      "Name": "Desk Lamp",
+      "Description__c": "LED desk lamp with adjustable brightness, color temperature control, and USB charging port. Eye-friendly design.",
+      "Price__c": 69.99,
+      "Image_URL__c": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400"
+    },
+    {
+      "attributes": {
+        "type": "E_Cart_Product__c",
+        "referenceId": "ECartProduct9"
+      },
+      "Name": "Webcam",
+      "Description__c": "1080p HD webcam with auto-focus, built-in microphone, and wide-angle lens. Perfect for video conferencing.",
+      "Price__c": 89.99,
+      "Image_URL__c": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=400"
+    },
+    {
+      "attributes": {
+        "type": "E_Cart_Product__c",
+        "referenceId": "ECartProduct10"
+      },
+      "Name": "Portable Charger",
+      "Description__c": "20,000mAh power bank with fast charging and dual USB ports. Keep your devices powered all day.",
+      "Price__c": 44.99,
+      "Image_URL__c": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=400"
+    },
+    {
+      "attributes": {
+        "type": "E_Cart_Product__c",
+        "referenceId": "ECartProduct11"
+      },
+      "Name": "Mechanical Keyboard",
+      "Description__c": "RGB mechanical gaming keyboard with customizable keys and durable switches. Enhance your typing experience.",
+      "Price__c": 129.99,
+      "Image_URL__c": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=400"
+    },
+    {
+      "attributes": {
+        "type": "E_Cart_Product__c",
+        "referenceId": "ECartProduct12"
+      },
+      "Name": "Monitor Stand",
+      "Description__c": "Adjustable monitor stand with storage drawer and phone holder. Improve your desk ergonomics.",
+      "Price__c": 54.99,
+      "Image_URL__c": "https://images.unsplash.com/photo-1527689368864-3a821dbccc34?w=400"
+    }
+  ]
+}
+

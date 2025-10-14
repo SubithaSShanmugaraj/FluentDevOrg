@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Fluent_Site_Users_Products</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Fluent Site Users - Products</label>
+        <sharedTo>
+            <group>Fluent_Site_Users</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingGuestRules>
+        <fullName>Share_E_Cart_Product_to_External_Users</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share E-Cart Product to External Users</label>
+        <sharedTo>
+            <guestUser>Fluent</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+</SharingRules>

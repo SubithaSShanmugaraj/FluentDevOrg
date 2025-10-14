@@ -1,0 +1,8 @@
+[
+  {
+    "sobject": "E_Cart_Product__c",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": ["E_Cart_Products.json"]
+  }
+]

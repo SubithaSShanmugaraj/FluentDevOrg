@@ -1,0 +1,21 @@
+{
+  "required" : [ "campaignId", "productCode" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "campaignId" : {
+      "title" : "campaignId",
+      "description" : "Pass '701gK00000NyCAkQAN'",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "productCode" : {
+      "title" : "productCode",
+      "description" : "Pass 'CHROMECAST-3GEN'",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

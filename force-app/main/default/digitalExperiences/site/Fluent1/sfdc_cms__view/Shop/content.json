@@ -1,0 +1,81 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Shop",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"c4a86284-d958-4cc1-82f6-2d1a82783044\",\"columns\":[{\"UUID\":\"6ca07359-d7a7-4fce-9af3-1ab0b4b2bc1d\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "recordId" : "701gK00000NyCAkQAN"
+              },
+              "definition" : "c:conversationalAdPlayer",
+              "id" : "fd380df2-e962-494d-b464-26910226e5bc",
+              "type" : "component"
+            }, {
+              "attributes" : { },
+              "definition" : "c:eCartHeader",
+              "id" : "1e35e100-9950-4061-aea5-ba5aec48b51b",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "maxRecords" : 12
+              },
+              "definition" : "c:productGrid",
+              "id" : "d8ca5ded-c56b-478e-89cd-9bf87ea69e02",
+              "type" : "component"
+            } ],
+            "id" : "6ca07359-d7a7-4fce-9af3-1ab0b4b2bc1d",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "c4a86284-d958-4cc1-82f6-2d1a82783044",
+          "type" : "component"
+        } ],
+        "id" : "fc6a69cf-48ff-4ccc-92b3-aefa433e37e3",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Shop",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "9babcdfe-8b9d-48ca-9c85-4b1008d39c26",
+          "type" : "component"
+        } ],
+        "id" : "69fccb7b-94b5-48cd-a20a-996d8d7b995d",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "c8c66fc9-7745-4f0f-97e3-d139407d7de5",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-shop"
+  },
+  "urlName" : "shop"
+}

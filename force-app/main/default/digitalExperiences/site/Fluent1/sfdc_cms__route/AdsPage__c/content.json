@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "AdsPage",
+  "contentBody" : {
+    "activeViewId" : "AdsPage",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-adspage",
+    "urlPrefix" : "adspage"
+  },
+  "urlName" : "adspage"
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DashboardFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>logesh.m@salesforce.com.a4ghackathon</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>ppooja@salesforce.com.a4ghackathon</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>prachi.agarwal@salesforce.com.a4ghackathon</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>sshanmugaraj@salesforce.com.a4ghackathon</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <name>PRM Dashboards</name>
+</DashboardFolder>

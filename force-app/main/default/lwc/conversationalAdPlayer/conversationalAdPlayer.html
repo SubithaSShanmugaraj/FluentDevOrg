@@ -1,0 +1,155 @@
+<template>
+    <div class="component-wrapper" data-component="conversational-ad-player">
+        <div class="carousel-container" style="background-color: #1a1a1a; min-height: 250px;">
+        <ul class="carousel-track">
+            <template for:each={videos} for:item="video">
+                <li key={video.id} class="carousel-slide">
+
+                    <template if:true={video.isYouTube}>
+                    <iframe
+                            src={video.videoUrl}
+                        width="100%"
+                        height="100%"
+                        frameborder="0"
+                        allowfullscreen>
+                    </iframe>
+                    </template>
+
+                    <template if:false={video.isYouTube}>
+                        <video 
+                            class="video-player"
+                            src={video.videoUrl}
+                            playsinline
+                            muted
+                            loop
+                            controls
+                            onerror={handleVideoError}
+                            onloadstart={handleVideoLoadStart}>
+                        </video>
+                    </template>
+                </li>
+            </template>
+        </ul>
+
+        <button class="carousel-button prev" onclick={goToPreviousSlide}>&#10094;</button>
+        <button class="carousel-button next" onclick={goToNextSlide}>&#10095;</button>
+
+        <!-- Voice Button (when not interacting) -->
+        <template if:false={showInteraction}>
+            <button class="voice-button-small" onclick={handleTapToAsk}>
+                <svg class="mic-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 1C10.34 1 9 2.34 9 4V12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12V4C15 2.34 13.66 1 12 1Z" fill="white"/>
+                    <path d="M17 12C17 14.76 14.76 17 12 17C9.24 17 7 14.76 7 12H5C5 15.53 7.61 18.43 11 18.92V23H13V18.92C16.39 18.43 19 15.53 19 12H17Z" fill="white"/>
+                </svg>
+                Ask Fluent
+            </button>
+        </template>
+
+        <!-- Voice & Text Input Interface (Wave Vibes Style) -->
+        <template if:true={showInteraction}>
+            <!-- Display Latest Question & Response -->
+            <template if:true={latestQuestion}>
+                <div class="interaction-display">
+                    <div class="user-question-display">
+                        <strong>You asked:</strong> {latestQuestion}
+                    </div>
+                </div>
+            </template>
+
+            <!-- Typing Indicator -->
+            <template if:true={isTyping}>
+                <div class="typing-indicator-display">
+                    <div class="typing-header">🤖 Fluent is typing</div>
+                    <div class="typing-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </template>
+
+            <!-- Agent Response Display -->
+            <template if:true={agentResponse}>
+                <div class="agent-response-display">
+                    <div class="response-content-only">{agentResponse}</div>
+                </div>
+            </template>
+
+            <!-- Live Transcript Display (While Recording) -->
+            <template if:true={isRecording}>
+                <template if:true={liveTranscript}>
+                    <div class="live-transcript">
+                        <div class="transcript-text">{liveTranscript}</div>
+                    </div>
+                </template>
+            </template>
+
+            <!-- Voice Input Section with Clear Chat Button -->
+            <div class="voice-input-container">
+            <!-- Voice Input Button -->
+            <button class={voiceButtonClass} onclick={handleVoiceToggle}>
+                <template if:true={isRecording}>
+                    <span class="pulse-ring"></span>
+                    <svg class="mic-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 1C10.34 1 9 2.34 9 4V12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12V4C15 2.34 13.66 1 12 1Z" fill="white"/>
+                        <path d="M17 12C17 14.76 14.76 17 12 17C9.24 17 7 14.76 7 12H5C5 15.53 7.61 18.43 11 18.92V23H13V18.92C16.39 18.43 19 15.53 19 12H17Z" fill="white"/>
+                    </svg>
+                    Listening...
+                </template>
+                <template if:false={isRecording}>
+                    <svg class="mic-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 1C10.34 1 9 2.34 9 4V12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12V4C15 2.34 13.66 1 12 1Z" fill="white"/>
+                        <path d="M17 12C17 14.76 14.76 17 12 17C9.24 17 7 14.76 7 12H5C5 15.53 7.61 18.43 11 18.92V23H13V18.92C16.39 18.43 19 15.53 19 12H17Z" fill="white"/>
+                    </svg>
+                    Ask Fluent
+                </template>
+            </button>
+
+                <!-- Clear Chat Button (appears next to Ask Fluent button when chat exists) -->
+                <template if:true={isCentered}>
+                    <template if:true={hasChatMessages}>
+                        <button class="clear-chat-button-beside" onclick={handleClearChat} title="Clear chat and start fresh">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 4V10H7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.51 15C4.15839 17.0038 5.50315 18.7184 7.32122 19.8609C9.13929 21.0035 11.3128 21.4986 13.4706 21.2654C15.6284 21.0322 17.6297 20.0843 19.1508 18.5676C20.6719 17.051 21.6248 15.0526 21.8618 12.8956C22.0988 10.7386 21.6077 8.56479 20.4688 6.74414C19.33 4.92349 17.6181 3.57484 15.6157 2.92129C13.6133 2.26774 11.4394 2.34682 9.48653 3.14473C7.53367 3.94264 5.91655 5.40835 4.91 7.29" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </template>
+                </template>
+            </div>
+
+            <!-- Text Input Section -->
+            <div class="text-input-section">
+                <input 
+                    type="text" 
+                    class="text-input-field" 
+                    placeholder="Ask Fluent anything..."
+                    value={currentMessage}
+                    oninput={handleMessageChange}
+                    onkeydown={handleKeyPress}
+                />
+                <button class="send-button" onclick={handleSendMessage}>
+                    ➤
+                </button>
+            </div>
+
+
+            <!-- Error Display -->
+            <template if:true={errorMessage}>
+                <div class="error-display">
+                    ⚠️ {errorMessage}
+                </div>
+            </template>
+        </template>
+    </div>
+        
+        <!-- Close button outside the video window - rendered last for proper z-index -->
+        <template if:true={isCentered}>
+            <button class="close-button-outside" onclick={handleCloseClick} title="Close">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </template>
+    </div>
+</template>

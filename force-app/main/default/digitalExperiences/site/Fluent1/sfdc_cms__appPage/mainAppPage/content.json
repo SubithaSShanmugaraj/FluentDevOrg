@@ -1,0 +1,12 @@
+{
+  "type" : "sfdc_cms__appPage",
+  "title" : "main",
+  "contentBody" : {
+    "currentThemeId" : "Build_Your_Own_LWR",
+    "headMarkup" : "<title>Welcome to LWC Communities!</title>\n\n<!-- branding stylesheets -->\n\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/salesforce-lightning-design-system.min.css?{ versionKey }\"/>\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-site-spacing-styling-hooks.min.css?{ versionKey }\" />\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-styling-hooks.min.css?{ versionKey }\" />\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-slds-extensions.min.css?{ versionKey }\" />\n\n\n\n<!-- branding stylesheets-->\n\n<link rel=\"stylesheet\" href=\"{ styles/styles.css }\" />\n<link rel=\"stylesheet\" href=\"{ styles/print.css }\" media=\"print\"/>\n\n<style>\n.floating-video-carousel {\n    position: fixed;\n    bottom: 20px;\n    right: 20px;\n    z-index: 1000;\n    width: 400px;\n    box-shadow: 0 10px 40px rgba(0,0,0,0.3);\n    border-radius: 12px;\n    overflow: hidden;\n}\n\n@media (max-width: 768px) {\n    .floating-video-carousel {\n        width: 90%;\n        right: 5%;\n        bottom: 10px;\n    }\n}\n</style>",
+    "isLockerServiceEnabled" : true,
+    "isRelaxedCSPLevel" : true,
+    "templateName" : "talon-template-byo"
+  },
+  "urlName" : "main"
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Agent_Id</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Agent Id</shortDescription>
+        <value>0XxgK000000noRtSAI</value>
+    </labels>
+    <labels>
+        <fullName>Consumer_Key</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Consumer Key</shortDescription>
+        <value>3MVG9rZjd7MXFdLgsonSG2EkyznZ2HOomuRkQw.eHNFa6ZnMRb18mQBFZo9h_u2xhKqty8R8WPgrAyK1Pp6JG</value>
+    </labels>
+    <labels>
+        <fullName>Consumer_Secret</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Consumer Secret</shortDescription>
+        <value>5008186028A6B81FC5FD356273C2B93E0748767FD395471BB49188D15C11F9A0</value>
+    </labels>
+</CustomLabels>
